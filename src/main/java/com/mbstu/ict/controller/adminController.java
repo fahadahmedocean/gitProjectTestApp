@@ -59,9 +59,7 @@ public class adminController {
 
     @RequestMapping(value = "/deleteStudent", method = RequestMethod.GET)
     public String deleteStudent(Model model, @RequestParam(value="studentId", required=false) Integer studentId) {
-        System.out.println("-----------delete-------------studentId:"+studentId);
-        System.out.println("-----------delete-------------studentId:"+studentId);
-        System.out.println("-----------delete-------------studentId:"+studentId);
+        System.out.println("TES TLOG ADDED :"+studentId);
         Student student = studentRepository.getStudentById(studentId);
         studentRepository.delete(student);
         return "redirect:./";
